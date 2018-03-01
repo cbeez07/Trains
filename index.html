@@ -9,6 +9,10 @@
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
 </head>
 
 <body>
@@ -32,6 +36,7 @@
           <th>Minutes Away</th>
         </tr>
       </thead>
+      <tbody id="train-schedule"></tbody>
     </table>
   </div>
 
@@ -39,25 +44,27 @@
     <h3 class="mt-1">Add Train</h3>
     <form action="" method="get">
       <div class="form-group">
-        <label for="">Train Name</label>
-        <input type="text" name="" id="" class="form-control">
+        <label for="name-input">Train Name</label>
+        <input type="text" id="name-input" class="form-control" required>
       </div>
       <div class="form-group">
-        <label for="">Destination</label>
-        <input type="text" name="" id="" class="form-control">
+        <label for="destination-input">Destination</label>
+        <input type="text" id="destination-input" class="form-control" required>
       </div>
       <div class="form-group">
-        <label for="">First Train Time (HH:mm - military time)</label>
-        <input type="text" name="" id="" class="form-control">
+        <label for="firstTime-input">First Train Time (HH:mm - military time)</label>
+        <input type="time" id="firstTime-input" class="form-control" required>
       </div>
       <div class="form-group">
-        <label for="">Frequency (min)</label>
-        <input type="text" name="" id="" class="form-control">
+        <label for="frequency-input">Frequency (min)</label>
+        <input type="number" min="1" id="frequency-input" class="form-control" required>
       </div>
-      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      <button type="submit" class="btn btn-primary mb-2" id="submit-button">Submit</button>
 
     </form>
   </div>
+  <script src='assets/app.js'>
+  </script>
 </body>
 
 </html>
