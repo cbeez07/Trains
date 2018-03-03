@@ -1,10 +1,3 @@
-// Train schedule.
-// connect to firebase and get the values to the train schedule table stored there.
-// print: train name, destination, and frequency.
-// calculate when the next time the train will arrive relative to the current time.
-  // function for next arrival that takes the first time adds the frequency
-// when the submit button is pressed send the name, destination, firstTime, and frequency to firebase.
-//make all inputs Requirements.
 $(document).ready(function() {
 
   // Initialize Firebase
